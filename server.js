@@ -5,6 +5,9 @@ const app = express();
 //Connect Database
 connectDb();
 
+// Init middleware
+app.use(express.json({ extended: false })); // Allows to accept data within a body of a request (req.body)
+
 app.get("/", (req, res) => res.json({ msg: "ContactKeeper API" }));
 
 // Define Routes
