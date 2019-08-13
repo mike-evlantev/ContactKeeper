@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Navbar = ({ title, icon }) => {
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-dark bg-dark">
       <a className="navbar-brand" href="www.google.com">
         <i className={icon} />
         &nbsp;
