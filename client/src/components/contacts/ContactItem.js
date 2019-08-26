@@ -38,30 +38,29 @@ const ContactItem = ({ contact }) => {
         </span>
       </div>
       <div className="card-body">
-        <h5 className="text-primary text-left"></h5>
-        <ul className="list">
+        <ul className="list-group list-group-flush">
           {email && (
-            <li>
+            <li className="list-group-item">
               <i className="fas fa-envelope-open" /> {email}
             </li>
           )}
           {phone && (
-            <li>
+            <li className="list-group-item">
               <i className="fas fa-phone" /> {phone}
             </li>
           )}
         </ul>
-        <p className="float-right">
+        <div className="mt-3 float-right">
           <button
-            className="btn btn-dark btn-sm mr-1"
+            className="btn btn-outline-dark btn-sm mr-1"
             onClick={() => setCurrent(contact)}
           >
             Edit
           </button>
-          <button className="btn btn-danger btn-sm" onClick={onDelete}>
+          <button className="btn btn-outline-danger btn-sm" onClick={onDelete}>
             Delete
           </button>
-        </p>
+        </div>
       </div>
     </div>
   );

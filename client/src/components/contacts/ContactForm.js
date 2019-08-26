@@ -47,7 +47,7 @@ const ContactForm = () => {
 
   return (
     <div className="card">
-      <div class="card-header">{current ? "Edit" : "Add"} Contact</div>
+      <div className="card-header">{current ? "Edit" : "Add"} Contact</div>
       <div className="card-body">
         <form onSubmit={onSubmit}>
           <div className="form-group">
@@ -81,36 +81,61 @@ const ContactForm = () => {
             />
           </div>
           <div className="form-group">
-            <div className="form-check">
-              <label className="form-check-label mr-3">Contact Type</label>
+            <div className="btn-group d-flex">
               <input
-                type="radio"
+                type="button"
+                className={`btn btn-outline-secondary ${
+                  type === "personal" ? "active" : ""
+                }`}
                 name="type"
                 value="personal"
-                checked={type === "personal"}
-                onChange={onChange}
-              />{" "}
-              Personal{" "}
+                onClick={onChange}
+              />
               <input
-                type="radio"
+                type="button"
+                className={`btn btn-outline-secondary ${
+                  type === "professional" ? "active" : ""
+                }`}
                 name="type"
                 value="professional"
-                checked={type === "professional"}
-                onChange={onChange}
-              />{" "}
-              Professional
+                onClick={onChange}
+              />
             </div>
           </div>
+          {/* <div className="form-group">
+            <div className="btn-group d-flex">
+              <button
+                className={`btn btn-outline-secondary ${
+                  type === "personal" ? "active" : ""
+                }`}
+                name="type"
+                value="personal"
+                onClick={onChange}
+              >
+                Personal
+              </button>
+              <button
+                className={`btn btn-outline-secondary ${
+                  type === "professional" ? "active" : ""
+                }`}
+                name="type"
+                value="professional"
+                onClick={onChange}
+              >
+                Professional
+              </button>
+            </div>
+          </div> */}
           <div>
             <input
               type="submit"
               value={current ? "Update Contact" : "Add Contact"}
-              className="btn btn-primary float-right"
+              className="btn btn-outline-primary float-right"
             />
           </div>
           {current && (
             <div>
-              <button className="btn btn-light" onClick={clearAll}>
+              <button className="btn btn-outline-secondary" onClick={clearAll}>
                 Clear
               </button>
             </div>
