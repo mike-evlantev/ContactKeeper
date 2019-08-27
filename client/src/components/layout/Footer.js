@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 
 const Footer = ({ version }) => {
   return (
-    <footer className="footer">
+    <footer className="navbar fixed-bottom navbar-light bg-light">
       <div className="container">
-        <span>Version: {version}</span>
+        <h6 className="navbar-brand text-muted">
+          <small>Version: {version}</small>
+        </h6>
       </div>
     </footer>
   );
