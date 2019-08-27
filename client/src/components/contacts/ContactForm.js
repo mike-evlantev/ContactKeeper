@@ -102,30 +102,6 @@ const ContactForm = () => {
               />
             </div>
           </div>
-          {/* <div className="form-group">
-            <div className="btn-group d-flex">
-              <button
-                className={`btn btn-outline-secondary ${
-                  type === "personal" ? "active" : ""
-                }`}
-                name="type"
-                value="personal"
-                onClick={onChange}
-              >
-                Personal
-              </button>
-              <button
-                className={`btn btn-outline-secondary ${
-                  type === "professional" ? "active" : ""
-                }`}
-                name="type"
-                value="professional"
-                onClick={onChange}
-              >
-                Professional
-              </button>
-            </div>
-          </div> */}
           <div>
             <input
               type="submit"
