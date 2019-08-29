@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Footer = ({ version }) => {
   return (
-    <footer className="navbar fixed-bottom navbar-light bg-light">
+    <footer className="navbar fixed-bottom navbar-dark bg-dark">
       <div className="container">
         <h6 className="navbar-brand text-muted">
           <small>Version: {version}</small>
