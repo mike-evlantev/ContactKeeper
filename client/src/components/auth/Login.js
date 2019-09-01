@@ -19,11 +19,11 @@ const Login = () => {
       </h1>
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <lable htmlFor="email">Email</lable>
+          <label htmlFor="email">Email</label>
           <input type="email" name="email" value={email} onChange={onChange} />
         </div>
         <div className="form-group">
-          <lable htmlFor="password">Password</lable>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
