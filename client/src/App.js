@@ -2,9 +2,10 @@ import React, { Fragment } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Alerts from "./components/layout/Alerts";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
-import Footer from "./components/layout/Footer";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 
@@ -21,6 +22,7 @@ const App = () => {
             <Fragment>
               <Navbar />
               <div className="container mt-5">
+                <Alerts />
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
