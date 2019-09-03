@@ -13,12 +13,29 @@ const Navbar = ({ title, icon }) => {
   };
   const authLinks = (
     <Fragment>
-      <li className="nav-item">{user && user.name}</li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/login" onClick={handleLogout}>
-          <i className="fas fa-sign-out-alt"></i>{" "}
-          <span className="hide-sm">Logout</span>
-        </Link>
+      <li className="nav-item dropdown">
+        <button
+          className="btn btn-light nav-link dropdown-toggle"
+          // href="javascript:void(0);"
+          id="navbarDropdown"
+          // role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i className="fas fa-user"></i> {user && user.name}
+        </button>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+          {/*TODO: */}
+          {/* <a className="dropdown-item" href="#">
+            Profile
+          </a>
+          <div className="dropdown-divider"></div> */}
+          <Link className="nav-link" to="/login" onClick={handleLogout}>
+            <i className="fas fa-sign-out-alt"></i>{" "}
+            <span className="hide-sm">Logout</span>
+          </Link>
+        </div>
       </li>
     </Fragment>
   );
@@ -43,8 +60,7 @@ const Navbar = ({ title, icon }) => {
       <div className="container">
         <Link className="navbar-brand" to="/">
           <i className={icon} />
-          &nbsp;
-          {title}
+          &nbsp; Contact <span className="text-primary">Keeper</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -59,11 +75,6 @@ const Navbar = ({ title, icon }) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </li>
             {isAuthenticated ? authLinks : guestLinks}
           </ul>
         </div>
