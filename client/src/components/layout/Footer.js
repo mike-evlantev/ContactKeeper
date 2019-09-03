@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Footer = ({ version }) => {
   return (
@@ -8,6 +9,13 @@ const Footer = ({ version }) => {
         <h6 className="navbar-brand text-muted">
           <small>Version: {version}</small>
         </h6>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">
+              About
+            </Link>
+          </li>
+        </ul>
       </div>
     </footer>
   );
