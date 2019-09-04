@@ -32,8 +32,19 @@
   }
 }
 
+.page container {
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+.content-wrap {
+  padding-bottom: 60px; /* Footer height */
+}
+
 .footer {
-  /* TODO: Make footer position dynamic */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Footer height */
 }
 
 /* Transition Animation */
