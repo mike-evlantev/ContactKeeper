@@ -35,8 +35,8 @@ const Login = props => {
 
   return (
     <div className="row">
-      <div className="col"></div>
-      <div className="col">
+      <div className="col-md"></div>
+      <div className="col-md">
         <div className="form-container">
           <h5 className="text-center">
             Account <span className="text-primary">Login</span>
@@ -70,7 +70,7 @@ const Login = props => {
           </form>
         </div>
       </div>
-      <div className="col"></div>
+      <div className="col-md"></div>
     </div>
   );
 };
