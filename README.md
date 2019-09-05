@@ -1,3 +1,5 @@
 # ContactKeeper
 
-a MERN stack app
+Use Contact Keeper to organize your contacts!
+
+MERN Stack App
