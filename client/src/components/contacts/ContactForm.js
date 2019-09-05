@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="card border-dark">
+    <div className="card border-dark mb-3">
       <div className="card-header">{current ? "Edit" : "Add"} Contact</div>
       <div className="card-body">
         <form onSubmit={onSubmit}>
