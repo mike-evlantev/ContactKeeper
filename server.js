@@ -9,6 +9,7 @@ connectDb();
 // Init middleware
 app.use(express.json({ extended: false })); // Allows to accept data within a body of a request (req.body)
 
+// TODO: Remove prior to deployment:
 // app.get("/", (req, res) => res.json({ msg: "ContactKeeper API" }));
 
 // Define Routes
@@ -29,3 +30,6 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+// to run locally: `npm run dev`
+// to run deploy: `git push heroku master`
